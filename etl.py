@@ -52,12 +52,11 @@ class ETL:
         for i in range(len(self.bird_SpeciesID)):
             temp = f'''INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific ){os.linesep}VALUES ({self.bird_SpeciesID[i]},'{self.bird_SpeciesC[i]}','{self.bird_SpeciesS[i]}');{os.linesep}{os.linesep}'''
             birdSpecTable.append(temp)
-
-        # print(birdSpecTable)
-
         with open('birdSpecTable.sql', 'w', encoding='utf-8') as f:
             for item in birdSpecTable:
                 f.write(item)
+        
+        
 
         
 
