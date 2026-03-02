@@ -1060,12 +1060,3 @@ VALUES (353,'MacGillivray's Warbler','Geothlypis tolmiei');
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (354,'American Coot','Fulica americana');
 
-INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (355,'Long-eared Owl','Asio otus');
-
-INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (356,'Spotted Owl','Strix occidentalis');
-
-INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (357,'Great Gray Owl','Strix nebulosa');
-
