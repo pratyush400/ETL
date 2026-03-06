@@ -16,6 +16,10 @@ class ETL:
         self.bird_neighbourhood = []
         self.bird_obseredvedDate = []
         self.bird_obseredvedDate_conv = []
+        self.siteID = []
+        self.siteType = []
+        self.siteSize = []
+        self.siteWidth = []
 
 
 
@@ -28,7 +32,11 @@ class ETL:
             next(reader)
             for row in reader:
                 self.treeID.append(row[2])
-
+                self.siteID.append(row[2])
+                self.siteType.append(row[11])
+                self.siteSize.append(row[12])
+                self.siteWidth.append(row[13])
+        
         with open('bird.csv', mode='r', encoding='utf-8') as csv_file:
             reader = csv.reader(csv_file)
             next(reader)
@@ -77,12 +85,27 @@ class ETL:
         for i in range(len(self.birdID)):
             if j >= 354:
                 j = 0
-            temp = f'''INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate ){os.linesep}VALUES ({self.birdID[i]},'{self.bird_SpeciesID[j]}','{self.bird_neighbourhood[j]}', '{self.bird_obseredvedDate_conv[j]}');{os.linesep}{os.linesep}'''
+            temp = f'''INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate ){os.linesep}VALUES ({self.birdID[i]},{self.bird_SpeciesID[j]},"{self.bird_neighbourhood[j]}", "{self.bird_obseredvedDate_conv[j]}");{os.linesep}{os.linesep}'''
             birdTable.append(temp)
             j += 1
         with open('birdTable.sql', 'w', encoding='utf-8') as f:
             for item in birdTable:
                 f.write(item)
+
+        siteTable = []
+        for i in range(len(self.siteID)):
+            temp = f'''INSERT INTO Site (ID, SiteType, SiteSize, SiteWidth){os.linesep}VALUES ({self.siteID[i]},'{self.siteType[i]}','{self.siteSize[i]}',{self.siteWidth[i]});{os.linesep}{os.linesep}'''
+            siteTable.append(temp)
+        with open('siteTable.sql', 'w', encoding='utf-8') as f:
+            for item in siteTable:
+                f.write(item)
+        
+        
+        
+        
+        
+
+        
 
         
         
