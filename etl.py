@@ -23,6 +23,7 @@ class ETL:
 
 
 
+
     def read_data(self):
         i_birdID = 1
         i_birdSciID = 1
@@ -53,8 +54,6 @@ class ETL:
                 data_converter = datetime.strptime(self.bird_obseredvedDate[date],format_code)
                 self.bird_obseredvedDate_conv.append(data_converter)
 
-
-            # for i in range(len(self.bird_obseredvedDate_conv)):
             #     print(self.bird_obseredvedDate_conv[i])
 
         with open('junction.csv', mode='r', encoding='utf-8') as csv_file:
@@ -72,7 +71,6 @@ class ETL:
     def create_table(self):
         birdSpecTable = []
         
-
         for i in range(len(self.bird_SpeciesID)):
             temp = f'''INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific ){os.linesep}VALUES ({self.bird_SpeciesID[i]},'{self.bird_SpeciesC[i]}','{self.bird_SpeciesS[i]}');{os.linesep}{os.linesep}'''
             birdSpecTable.append(temp)
@@ -100,7 +98,9 @@ class ETL:
             for item in siteTable:
                 f.write(item)
 
-        # site
+        treeTable = []
+        for i in range(len(self.treeID)):
+            temp = f'''INSERT INTO tree (ID, SiteID, Species, MatureSize, XCoordinate,  )'''
         
         
         
