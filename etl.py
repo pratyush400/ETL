@@ -99,6 +99,8 @@ class ETL:
         with open('siteTable.sql', 'w', encoding='utf-8') as f:
             for item in siteTable:
                 f.write(item)
+
+        # site
         
         
         
