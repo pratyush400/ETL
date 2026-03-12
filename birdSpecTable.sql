@@ -1,3 +1,4 @@
+USE tree;
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (1,'Northern Wheatear','Oenanthe oenanthe');
 
@@ -23,7 +24,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (8,'Red Knot','Calidris canutus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (9,'Lawrence's Goldfinch','Spinus lawrencei');
+VALUES (9,'Lawrences Goldfinch','Spinus lawrencei');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (10,'Lesser Black-backed Gull','Larus fuscus');
@@ -32,7 +33,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (11,'Black-chinned Hummingbird','Archilochus alexandri');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (12,'Brandt's Cormorant','Urile penicillatus');
+VALUES (12,'Brandts Cormorant','Urile penicillatus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (13,'Orchard Oriole','Icterus spurius');
@@ -80,7 +81,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (27,'Wild Turkey','Meleagris gallopavo');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (28,'Virginia's Warbler','Leiothlypis virginiae');
+VALUES (28,'Virginias Warbler','Leiothlypis virginiae');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (29,'Baikal Teal','Sibirionetta formosa');
@@ -95,7 +96,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (32,'Hooded Oriole','Icterus cucullatus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (33,'Williamson's Sapsucker','Sphyrapicus thyroideus');
+VALUES (33,'Williamsons Sapsucker','Sphyrapicus thyroideus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (34,'Black-legged Kittiwake','Rissa tridactyla');
@@ -104,10 +105,10 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (35,'Pygmy Nuthatch','Sitta pygmaea');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (36,'Heermann's Gull','Larus heermanni');
+VALUES (36,'Heermanns Gull','Larus heermanni');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (37,'Cassin's Auklet','Ptychoramphus aleuticus');
+VALUES (37,'Cassins Auklet','Ptychoramphus aleuticus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (38,'Ovenbird','Seiurus aurocapilla');
@@ -197,13 +198,13 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (66,'White-winged Scoter','Melanitta deglandi');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (67,'Clark's Nutcracker','Nucifraga columbiana');
+VALUES (67,'Clarks Nutcracker','Nucifraga columbiana');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (68,'Lark Sparrow','Chondestes grammacus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (69,'Cassin's Finch','Haemorhous cassinii');
+VALUES (69,'Cassins Finch','Haemorhous cassinii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (70,'Black-billed Magpie','Pica hudsonia');
@@ -215,7 +216,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (72,'Black-necked Stilt','Himantopus mexicanus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (73,'Brewer's Sparrow','Spizella breweri');
+VALUES (73,'Brewers Sparrow','Spizella breweri');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (74,'Black-throated Blue Warbler','Setophaga caerulescens');
@@ -239,7 +240,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (80,'Eurasian Collared-Dove','Streptopelia decaocto');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (81,'Smith's Longspur','Calcarius pictus');
+VALUES (81,'Smiths Longspur','Calcarius pictus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (82,'Black Tern','Chlidonias niger');
@@ -293,7 +294,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (98,'Acorn Woodpecker','Melanerpes formicivorus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (99,'Swainson's Hawk','Buteo swainsoni');
+VALUES (99,'Swainsons Hawk','Buteo swainsoni');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (100,'Brant','Branta bernicla');
@@ -347,16 +348,16 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (116,'American Tree Sparrow','Spizelloides arborea');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (117,'Ross's Goose','Anser rossii');
+VALUES (117,'Rosss Goose','Anser rossii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (118,'Clark's Grebe','Aechmophorus clarkii');
+VALUES (118,'Clarks Grebe','Aechmophorus clarkii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (119,'Black Swift','Cypseloides niger');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (120,'Say's Phoebe','Sayornis saya');
+VALUES (120,'Says Phoebe','Sayornis saya');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (121,'Red-necked Grebe','Podiceps grisegena');
@@ -365,7 +366,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (122,'Eared Grebe','Podiceps nigricollis');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (123,'Harris's Sparrow','Zonotrichia querula');
+VALUES (123,'Harriss Sparrow','Zonotrichia querula');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (124,'Golden Eagle','Aquila chrysaetos');
@@ -380,7 +381,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (127,'Ruff','Calidris pugnax');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (128,'Wilson's Phalarope','Phalaropus tricolor');
+VALUES (128,'Wilsons Phalarope','Phalaropus tricolor');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (129,'White-winged Crossbill','Loxia leucoptera');
@@ -431,10 +432,10 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (144,'Canyon Wren','Catherpes mexicanus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (145,'Sabine's Gull','Xema sabini');
+VALUES (145,'Sabines Gull','Xema sabini');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (146,'Leach's Storm-Petrel','Hydrobates leucorhous');
+VALUES (146,'Leachs Storm-Petrel','Hydrobates leucorhous');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (147,'Brown Thrasher','Toxostoma rufum');
@@ -452,7 +453,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (151,'Rusty Blackbird','Euphagus carolinus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (152,'Baird's Sandpiper','Calidris bairdii');
+VALUES (152,'Bairds Sandpiper','Calidris bairdii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (153,'Semipalmated Plover','Charadrius semipalmatus');
@@ -464,7 +465,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (155,'Western Flycatcher','Empidonax difficilis');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (156,'Barrow's Goldeneye','Bucephala islandica');
+VALUES (156,'Barrows Goldeneye','Bucephala islandica');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (157,'Dusky Flycatcher','Empidonax oberholseri');
@@ -473,7 +474,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (158,'Common Loon','Gavia immer');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (159,'Franklin's Gull','Leucophaeus pipixcan');
+VALUES (159,'Franklins Gull','Leucophaeus pipixcan');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (160,'Blue Jay','Cyanocitta cristata');
@@ -509,7 +510,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (170,'Pectoral Sandpiper','Calidris melanotos');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (171,'Forster's Tern','Sterna forsteri');
+VALUES (171,'Forsters Tern','Sterna forsteri');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (172,'Western Gull','Larus occidentalis');
@@ -530,7 +531,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (177,'Canada Jay','Perisoreus canadensis');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (178,'Hutton's Vireo','Vireo huttoni');
+VALUES (178,'Huttons Vireo','Vireo huttoni');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (179,'Cackling Goose','Branta hutchinsii');
@@ -542,7 +543,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (181,'Northern Shrike','Lanius borealis');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (182,'Costa's Hummingbird','Calypte costae');
+VALUES (182,'Costas Hummingbird','Calypte costae');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (183,'Stilt Sandpiper','Calidris himantopus');
@@ -581,7 +582,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (194,'Short-billed Gull','Larus brachyrhynchus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (195,'Anna's Hummingbird','Calypte anna');
+VALUES (195,'Annas Hummingbird','Calypte anna');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (196,'Rustic Bunting','Emberiza rustica');
@@ -605,7 +606,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (202,'Green Heron','Butorides virescens');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (203,'Cassin's Vireo','Vireo cassinii');
+VALUES (203,'Cassins Vireo','Vireo cassinii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (204,'Western Wood-Pewee','Contopus sordidulus');
@@ -617,13 +618,13 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (206,'Red-breasted Sapsucker','Sphyrapicus ruber');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (207,'Hammond's Flycatcher','Empidonax hammondii');
+VALUES (207,'Hammonds Flycatcher','Empidonax hammondii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (208,'Townsend's Solitaire','Myadestes townsendi');
+VALUES (208,'Townsends Solitaire','Myadestes townsendi');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (209,'Townsend's Warbler','Setophaga townsendi');
+VALUES (209,'Townsends Warbler','Setophaga townsendi');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (210,'Hermit Warbler','Setophaga occidentalis');
@@ -635,7 +636,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (212,'Blue-winged Teal','Spatula discors');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (213,'Bonaparte's Gull','Chroicocephalus philadelphia');
+VALUES (213,'Bonapartes Gull','Chroicocephalus philadelphia');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (214,'Sora','Porzana carolina');
@@ -680,7 +681,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (227,'White-throated Sparrow','Zonotrichia albicollis');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (228,'Lincoln's Sparrow','Melospiza lincolnii');
+VALUES (228,'Lincolns Sparrow','Melospiza lincolnii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (229,'Ring-billed Gull','Larus delawarensis');
@@ -755,7 +756,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (252,'Pacific Wren','Troglodytes pacificus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (253,'Swainson's Thrush','Catharus ustulatus');
+VALUES (253,'Swainsons Thrush','Catharus ustulatus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (254,'Hermit Thrush','Catharus guttatus');
@@ -791,7 +792,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (264,'Sandhill Crane','Antigone canadensis');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (265,'Cooper's Hawk','Astur cooperii');
+VALUES (265,'Coopers Hawk','Astur cooperii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (266,'Rough-legged Hawk','Buteo lagopus');
@@ -824,7 +825,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (275,'Black-throated Gray Warbler','Setophaga nigrescens');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (276,'Wilson's Warbler','Cardellina pusilla');
+VALUES (276,'Wilsons Warbler','Cardellina pusilla');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (277,'Western Tanager','Piranga ludoviciana');
@@ -854,7 +855,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (285,'Rock Pigeon','Columba livia');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (286,'Steller's Jay','Cyanocitta stelleri');
+VALUES (286,'Stellers Jay','Cyanocitta stelleri');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (287,'Bushtit','Psaltriparus minimus');
@@ -878,7 +879,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (293,'Golden-crowned Kinglet','Regulus satrapa');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (294,'Bewick's Wren','Thryomanes bewickii');
+VALUES (294,'Bewicks Wren','Thryomanes bewickii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (295,'Dark-eyed Junco','Junco hyemalis');
@@ -890,10 +891,10 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (297,'Yellow-billed Cuckoo','Coccyzus americanus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (298,'Vaux's Swift','Chaetura vauxi');
+VALUES (298,'Vauxs Swift','Chaetura vauxi');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (299,'Lewis's Woodpecker','Melanerpes lewis');
+VALUES (299,'Lewiss Woodpecker','Melanerpes lewis');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (300,'Cliff Swallow','Petrochelidon pyrrhonota');
@@ -902,7 +903,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (301,'Western Bluebird','Sialia mexicana');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (302,'Bullock's Oriole','Icterus bullockii');
+VALUES (302,'Bullocks Oriole','Icterus bullockii');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (303,'Common Yellowthroat','Geothlypis trichas');
@@ -977,7 +978,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (326,'European Starling','Sturnus vulgaris');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (327,'Brewer's Blackbird','Euphagus cyanocephalus');
+VALUES (327,'Brewers Blackbird','Euphagus cyanocephalus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (328,'American Goldfinch','Spinus tristis');
@@ -1010,7 +1011,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (337,'Killdeer','Charadrius vociferus');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (338,'Wilson's Snipe','Gallinago delicata');
+VALUES (338,'Wilsons Snipe','Gallinago delicata');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (339,'Least Sandpiper','Calidris minutilla');
@@ -1055,7 +1056,7 @@ INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (352,'Western Meadowlark','Sturnella neglecta');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
-VALUES (353,'MacGillivray's Warbler','Geothlypis tolmiei');
+VALUES (353,'MacGillivrays Warbler','Geothlypis tolmiei');
 
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (354,'American Coot','Fulica americana');

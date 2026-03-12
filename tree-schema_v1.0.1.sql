@@ -1,0 +1,58 @@
+-- Tree database
+-- Version 1.0.1
+-- Date 3/10/2026
+-- Author Pratyush K. Jha & Daniel Macha
+
+DROP DATABASE IF EXISTS tree;
+CREATE DATABASE tree;
+USE tree;
+
+
+CREATE TABLE BirdSpecies (
+  ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  SpeciesCommon VARCHAR(50) NOT NULL,
+  SpeciesScientific VARCHAR(50) NOT NULL UNIQUE,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE Bird (
+	ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    BirdSpeciesID INT UNSIGNED NOT NULL, 
+	Neighbourhood VARCHAR(50) NOT NULL,
+	ObservedDate DATETIME,
+	PRIMARY KEY (ID),
+    CONSTRAINT fk_species_bird FOREIGN KEY (BirdSpeciesID) REFERENCES BirdSpecies(ID)
+);
+
+
+
+CREATE TABLE Site(
+  ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  SiteType VARCHAR(50) NOT NULL,
+  SiteSize VARCHAR(10),
+  SiteWidth decimal(8,8) NOT NULL, 
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE Tree (
+  ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    SiteID INT UNSIGNED NOT NULL,
+	Species VARCHAR(50) NOT NULL,
+	MatureSize  VARCHAR(10)NOT NULL,
+  XCoordinate decimal(9,4) NOT NULL UNIQUE
+  CHECK (YCoordinate BETWEEN -90 AND 90),
+	YCoordinate decimal(9,4) NOT NULL UNIQUE
+  CHECK (XCoordinate BETWEEN -180 AND 180),
+	PRIMARY KEY (ID),
+    CONSTRAINT fk_site_tree FOREIGN KEY(SiteID) REFERENCES Site(ID)
+);
+
+CREATE TABLE NestsIn(
+	TreeID INT UNSIGNED NOT NULL,
+  BirdID INT UNSIGNED NOT NULL,
+  NestYear YEAR NOT NULL
+  CHECK (NestYear >= 2000),
+  PRIMARY KEY (TreeID, BirdID, NestYear),
+  CONSTRAINT fk_nestsin_tree FOREIGN KEY (TreeID) REFERENCES Tree(ID),
+  CONSTRAINT fk_nestsin_bird FOREIGN KEY (BirdID) REFERENCES Bird(ID)
+);

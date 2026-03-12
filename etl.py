@@ -1,3 +1,5 @@
+__author__ = 'Pratyush and Daniel'
+
 import csv
 import os
 from datetime import datetime
@@ -27,7 +29,6 @@ class ETL:
 
 
 
-
     def read_data(self):
         i_birdID = 1
         i_birdSciID = 1
@@ -50,9 +51,9 @@ class ETL:
             reader = csv.reader(csv_file)
             next(reader)
             for row in reader:
-                self.bird_SpeciesC.append(row[1])
-                self.bird_SpeciesS.append(row[2])
-                self.bird_neighbourhood.append(row[11])
+                self.bird_SpeciesC.append(row[1].replace("'", ""))
+                self.bird_SpeciesS.append(row[2].replace("'", ""))
+                self.bird_neighbourhood.append(row[11].replace("'", ""))
                 self.bird_SpeciesID.append(i_birdSciID)
                 i_birdSciID += 1
                 self.bird_obseredvedDate.append(row[7])
@@ -62,7 +63,7 @@ class ETL:
                 data_converter = datetime.strptime(self.bird_obseredvedDate[date],format_code)
                 self.bird_obseredvedDate_conv.append(data_converter)
 
-            #     print(self.bird_obseredvedDate_conv[i])
+                # print(self.bird_obseredvedDate_conv[i])
 
         with open('junction.csv', mode='r', encoding='utf-8') as csv_file:
             reader = csv.reader(csv_file)
@@ -77,7 +78,7 @@ class ETL:
                 i_birdID = i_birdID + 1
 
     def create_table(self):
-        birdSpecTable = []
+        birdSpecTable = ["USE tree;\n"]
         
         for i in range(len(self.bird_SpeciesID)):
             temp = f'''INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific ){os.linesep}VALUES ({self.bird_SpeciesID[i]},'{self.bird_SpeciesC[i]}','{self.bird_SpeciesS[i]}');{os.linesep}{os.linesep}'''
@@ -86,19 +87,19 @@ class ETL:
             for item in birdSpecTable:
                 f.write(item)
 
-        birdTable = []
+        birdTable = ["USE tree;\n"]
         j = 0
         for i in range(len(self.birdID)):
             if j >= 354:
                 j = 0
-            temp = f'''INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate ){os.linesep}VALUES ({self.birdID[i]},{self.bird_SpeciesID[j]},"{self.bird_neighbourhood[j]}", "{self.bird_obseredvedDate_conv[j]}");{os.linesep}{os.linesep}'''
+            temp = f'''INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate ){os.linesep}VALUES ({self.birdID[i]},{self.bird_SpeciesID[j]},'{self.bird_neighbourhood[j]}', '{self.bird_obseredvedDate_conv[j]}');{os.linesep}{os.linesep}'''
             birdTable.append(temp)
             j += 1
         with open('birdTable.sql', 'w', encoding='utf-8') as f:
             for item in birdTable:
                 f.write(item)
 
-        siteTable = []
+        siteTable = ["USE tree;\n"]
         for i in range(len(self.siteID)):
             temp = f'''INSERT INTO Site (ID, SiteType, SiteSize, SiteWidth){os.linesep}VALUES ({self.siteID[i]},'{self.siteType[i]}','{self.siteSize[i]}',{self.siteWidth[i]});{os.linesep}{os.linesep}'''
             siteTable.append(temp)
@@ -106,26 +107,23 @@ class ETL:
             for item in siteTable:
                 f.write(item)
 
-        treeTable = []
+        treeTable = ["USE tree;\n"]
         for i in range(len(self.treeID)):
-            temp = f'''INSERT INTO tree (ID, SiteID, Species, MatureSize, XCoordinate, YCoodrdinate){os.linesep}VALUES ({self.treeID[i]}, {self.siteID[i]},'{self.species[i]}', '{self.maturesize[i]}', {self.xcoordinate[i]}, {self.ycoordinate[i]}); {os.linesep}{os.linesep}'''
+            temp = f'''INSERT INTO Tree (ID, SiteID, Species, MatureSize, XCoordinate, YCoodrdinate){os.linesep}VALUES ({self.treeID[i]}, {self.siteID[i]},'{self.species[i]}', '{self.maturesize[i]}', {self.xcoordinate[i]}, {self.ycoordinate[i]}); {os.linesep}{os.linesep}'''
             treeTable.append(temp)
         with open('treeTable.sql', 'w', encoding='utf-8') as f:
             for item in treeTable:
                 f.write(item)
-        
-        
-        
-        
-        
+
+        nestsInTable = ["USE tree;\n"]
+        for i in range(len(self.birdID)):
+            temp = f'''INSERT INTO NestsIn (TreeID, BirdID, NestYear){os.linesep}VALUES ({self.tree_NestsIn[i]}, {self.bird_NestsIn[i]},{self.year_NestsIn[i]}); {os.linesep}{os.linesep}'''
+            nestsInTable.append(temp)
+        with open('nestsInTable.sql', 'w', encoding='utf-8') as f:
+            for item in nestsInTable:
+                f.write(item)
 
         
-
-        
-        
-
-        
-
 
 
 
