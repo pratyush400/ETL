@@ -40,9 +40,7 @@ CREATE TABLE Tree (
 	Species VARCHAR(50) NOT NULL,
 	MatureSize  VARCHAR(10)NOT NULL,
   XCoordinate decimal(9,4) NOT NULL UNIQUE
-  CHECK (YCoordinate BETWEEN -90 AND 90),
 	YCoordinate decimal(9,4) NOT NULL UNIQUE
-  CHECK (XCoordinate BETWEEN -180 AND 180),
 	PRIMARY KEY (ID),
     CONSTRAINT fk_site_tree FOREIGN KEY(SiteID) REFERENCES Site(ID)
 );
