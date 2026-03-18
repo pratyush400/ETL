@@ -1,4 +1,7 @@
 USE tree;
+ SET autocommit=0;
+ SET unique_checks=0;
+ SET foreign_key_checks=0;
 INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate )
 VALUES (1,1,'Rooster Rock SP', '2025-10-11 00:00:00');
 
@@ -3152,3 +3155,7 @@ VALUES (1050,342,'Government Island SP', '1902-09-24 00:00:00');
 INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate )
 VALUES (1051,343,'Government Island SP', '1902-09-24 00:00:00');
 
+COMMIT;
+ SET autocommit=1; 
+ SET unique_checks=1; 
+ SET foreign_key_checks=1;

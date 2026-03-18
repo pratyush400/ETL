@@ -1,5 +1,5 @@
 -- Tree database
--- Version 1.0.1
+-- Version 1.0.2
 -- Date 3/10/2026
 -- Author Pratyush K. Jha & Daniel Macha
 
@@ -10,15 +10,15 @@ USE tree;
 
 CREATE TABLE BirdSpecies (
   ID INT UNSIGNED AUTO_INCREMENT,
-  SpeciesCommon VARCHAR(50) NOT NULL,
-  SpeciesScientific VARCHAR(50) NOT NULL UNIQUE,
+  SpeciesCommon VARCHAR(60) NOT NULL,
+  SpeciesScientific VARCHAR(60) NOT NULL UNIQUE,
   PRIMARY KEY (ID)
 );
 
 CREATE TABLE Bird (
 	ID INT UNSIGNED AUTO_INCREMENT,
     BirdSpeciesID INT UNSIGNED NOT NULL, 
-	Neighbourhood VARCHAR(50) NOT NULL,
+	Neighbourhood VARCHAR(70) NOT NULL,
 	ObservedDate DATETIME,
 	PRIMARY KEY (ID),
     CONSTRAINT fk_species_bird FOREIGN KEY (BirdSpeciesID) REFERENCES BirdSpecies(ID)
@@ -28,19 +28,19 @@ CREATE TABLE Bird (
 
 CREATE TABLE Site(
   ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  SiteType VARCHAR(50) NOT NULL,
+  SiteType VARCHAR(60) NOT NULL,
   SiteSize VARCHAR(10),
-  SiteWidth decimal(8,8) NOT NULL, 
+  SiteWidth decimal(10,10) NOT NULL, 
   PRIMARY KEY (ID)
 );
 
 CREATE TABLE Tree (
   ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
     SiteID INT UNSIGNED NOT NULL,
-	Species VARCHAR(50) NOT NULL,
+	Species VARCHAR(60) NOT NULL,
 	MatureSize  VARCHAR(10)NOT NULL,
-  XCoordinate decimal(9,4) NOT NULL UNIQUE
-	YCoordinate decimal(9,4) NOT NULL UNIQUE
+  XCoordinate decimal(12,12) NOT NULL UNIQUE,
+	YCoordinate decimal(12,12) NOT NULL UNIQUE,
 	PRIMARY KEY (ID),
     CONSTRAINT fk_site_tree FOREIGN KEY(SiteID) REFERENCES Site(ID)
 );

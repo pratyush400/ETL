@@ -1,4 +1,7 @@
 USE tree;
+ SET autocommit=0;
+ SET unique_checks=0;
+ SET foreign_key_checks=0;
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (1,'Northern Wheatear','Oenanthe oenanthe');
 
@@ -1061,3 +1064,7 @@ VALUES (353,'MacGillivrays Warbler','Geothlypis tolmiei');
 INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific )
 VALUES (354,'American Coot','Fulica americana');
 
+COMMIT;
+ SET autocommit=1; 
+ SET unique_checks=1; 
+ SET foreign_key_checks=1;

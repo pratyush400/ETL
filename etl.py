@@ -1,5 +1,11 @@
 __author__ = 'Pratyush and Daniel'
-
+'''Please Import The sql queries in the following order: 
+1)BirdSpecies
+2)Bird
+3)Site
+4)Tree
+5)NestsIn
+We tested our injections through apache and they all worked fine. The behaviour does not seem to replicate in other environments'''
 import csv
 import os
 from datetime import datetime
@@ -26,6 +32,8 @@ class ETL:
         self.maturesize = []
         self.xcoordinate = []
         self.ycoordinate = []
+        self.begin_line = f'''USE tree;\n SET autocommit=0;\n SET unique_checks=0;\n SET foreign_key_checks=0;\n'''
+        self.end_line = f'''COMMIT;\n SET autocommit=1; \n SET unique_checks=1; \n SET foreign_key_checks=1;\n'''
 
 
 
@@ -77,17 +85,20 @@ class ETL:
                 self.birdID.append(i_birdID)
                 i_birdID = i_birdID + 1
 
+
     def create_table(self):
-        birdSpecTable = ["USE tree;\n"]
+        birdSpecTable = [self.begin_line]
         
         for i in range(len(self.bird_SpeciesID)):
             temp = f'''INSERT INTO BirdSpecies (ID, SpeciesCommon, SpeciesScientific ){os.linesep}VALUES ({self.bird_SpeciesID[i]},'{self.bird_SpeciesC[i]}','{self.bird_SpeciesS[i]}');{os.linesep}{os.linesep}'''
             birdSpecTable.append(temp)
+        birdSpecTable.append(self.end_line)
         with open('birdSpecTable.sql', 'w', encoding='utf-8') as f:
             for item in birdSpecTable:
                 f.write(item)
+        
 
-        birdTable = ["USE tree;\n"]
+        birdTable = [self.begin_line]
         j = 0
         for i in range(len(self.birdID)):
             if j >= 354:
@@ -95,29 +106,37 @@ class ETL:
             temp = f'''INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate ){os.linesep}VALUES ({self.birdID[i]},{self.bird_SpeciesID[j]},'{self.bird_neighbourhood[j]}', '{self.bird_obseredvedDate_conv[j]}');{os.linesep}{os.linesep}'''
             birdTable.append(temp)
             j += 1
+        birdTable.append(self.end_line)
         with open('birdTable.sql', 'w', encoding='utf-8') as f:
             for item in birdTable:
                 f.write(item)
 
-        siteTable = ["USE tree;\n"]
+        siteTable = [self.begin_line]
         for i in range(len(self.siteID)):
             temp = f'''INSERT INTO Site (ID, SiteType, SiteSize, SiteWidth){os.linesep}VALUES ({self.siteID[i]},'{self.siteType[i]}','{self.siteSize[i]}',{self.siteWidth[i]});{os.linesep}{os.linesep}'''
             siteTable.append(temp)
+        siteTable.append(self.end_line)
         with open('siteTable.sql', 'w', encoding='utf-8') as f:
             for item in siteTable:
                 f.write(item)
 
-        treeTable = ["USE tree;\n"]
+        treeTable = [self.begin_line]
         for i in range(len(self.treeID)):
             temp = f'''INSERT INTO Tree (ID, SiteID, Species, MatureSize, XCoordinate, YCoodrdinate){os.linesep}VALUES ({self.treeID[i]}, {self.siteID[i]},'{self.species[i]}', '{self.maturesize[i]}', {self.xcoordinate[i]}, {self.ycoordinate[i]}); {os.linesep}{os.linesep}'''
             treeTable.append(temp)
+        treeTable.append(self.end_line)
         with open('treeTable.sql', 'w', encoding='utf-8') as f:
             for item in treeTable:
                 f.write(item)
 
-        nestINTable = []
-        for i in range(len(self.birdID)):
-            temp = f'''INSERT INTO tree (ID, SiteID, Species, MatureSize, XCoordinate, YCoodrdinate){os.linesep}VALUES ({self.treeID[i]}, {self.birdID[i]}, {self.year_NestsIn})'''
+        nestINTable = [self.begin_line]
+        for i in range(len(self.year_NestsIn)):
+            temp = f'''INSERT INTO NestsIn (TreeID, BirdID, NestYear){os.linesep}VALUES ({self.tree_NestsIn[i]}, {self.bird_NestsIn[i]}, {self.year_NestsIn[i]}){os.linesep}{os.linesep}'''
+            nestINTable.append(temp)
+        nestINTable.append(self.end_line)
+        with open('nestInTable.sql', 'w', encoding='utf-8') as f:
+                    for item in nestINTable:
+                        f.write(item)
         
         
         
