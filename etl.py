@@ -113,7 +113,7 @@ class ETL:
 
         siteTable = [self.begin_line]
         for i in range(len(self.siteID)):
-            temp = f'''INSERT INTO Site (ID, SiteType, SiteSize, SiteWidth){os.linesep}VALUES ({self.siteID[i]},'{self.siteType[i]}','{self.siteSize[i]}',{self.siteWidth[i]});{os.linesep}{os.linesep}'''
+            temp = f'''INSERT INTO Site (ID, SiteType, SiteSize, SiteWidth){os.linesep}VALUES ({self.siteID[i]},'{self.siteType[i]}','{(self.siteSize[i])}',{round(float(self.siteWidth[i]),2)});{os.linesep}{os.linesep}'''
             siteTable.append(temp)
         siteTable.append(self.end_line)
         with open('siteTable.sql', 'w', encoding='utf-8') as f:

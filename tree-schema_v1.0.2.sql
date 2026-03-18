@@ -30,7 +30,7 @@ CREATE TABLE Site(
   ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   SiteType VARCHAR(60) NOT NULL,
   SiteSize VARCHAR(10),
-  SiteWidth decimal(10,10) NOT NULL, 
+  SiteWidth decimal(10,4) NOT NULL, 
   PRIMARY KEY (ID)
 );
 
@@ -39,8 +39,8 @@ CREATE TABLE Tree (
     SiteID INT UNSIGNED NOT NULL,
 	Species VARCHAR(60) NOT NULL,
 	MatureSize  VARCHAR(10)NOT NULL,
-  XCoordinate decimal(12,12) NOT NULL UNIQUE,
-	YCoordinate decimal(12,12) NOT NULL UNIQUE,
+  XCoordinate decimal(24,12) NOT NULL UNIQUE,
+	YCoordinate decimal(24,12) NOT NULL UNIQUE,
 	PRIMARY KEY (ID),
     CONSTRAINT fk_site_tree FOREIGN KEY(SiteID) REFERENCES Site(ID)
 );
