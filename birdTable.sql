@@ -3155,6 +3155,15 @@ VALUES (1050,342,'Government Island SP', '1902-09-24 00:00:00');
 INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate )
 VALUES (1051,343,'Government Island SP', '1902-09-24 00:00:00');
 
+INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate )
+VALUES (1052,344,'Government Island SP', '1902-09-24 00:00:00');
+
+INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate )
+VALUES (1053,345,'Government Island SP', '1902-09-24 00:00:00');
+
+INSERT INTO Bird (ID,BirdSpeciesID , Neighbourhood, ObservedDate )
+VALUES (1054,346,'Government Island SP', '1902-09-24 00:00:00');
+
 COMMIT;
  SET autocommit=1; 
  SET unique_checks=1; 

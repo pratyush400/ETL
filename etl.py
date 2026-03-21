@@ -8,6 +8,7 @@ __author__ = 'Pratyush and Daniel'
 We tested our injections through apache and they all worked fine. The behaviour does not seem to replicate in other environments'''
 import csv
 import os
+import random
 from datetime import datetime
 class ETL:
     def __init__(self):
@@ -50,7 +51,7 @@ class ETL:
                 self.siteType.append(row[11])
                 self.siteSize.append(row[12])
                 self.siteWidth.append(row[13])
-                self.species.append(row[6])
+                self.species.append(row[6].replace("'", ""))
                 self.maturesize.append(row[7])
                 self.xcoordinate.append(row[0])
                 self.ycoordinate.append(row[1])
@@ -122,7 +123,7 @@ class ETL:
 
         treeTable = [self.begin_line]
         for i in range(len(self.treeID)):
-            temp = f'''INSERT INTO Tree (ID, SiteID, Species, MatureSize, XCoordinate, YCoodrdinate){os.linesep}VALUES ({self.treeID[i]}, {self.siteID[i]},'{self.species[i]}', '{self.maturesize[i]}', {self.xcoordinate[i]}, {self.ycoordinate[i]}); {os.linesep}{os.linesep}'''
+            temp = f'''INSERT INTO Tree (ID, SiteID, Species, MatureSize, XCoordinate, YCoordinate){os.linesep}VALUES ({self.treeID[i]}, {self.siteID[i]},'{self.species[i]}', '{self.maturesize[i]}', {self.xcoordinate[i]}, {self.ycoordinate[i]}); {os.linesep}{os.linesep}'''
             treeTable.append(temp)
         treeTable.append(self.end_line)
         with open('treeTable.sql', 'w', encoding='utf-8') as f:
@@ -131,7 +132,7 @@ class ETL:
 
         nestINTable = [self.begin_line]
         for i in range(len(self.year_NestsIn)):
-            temp = f'''INSERT INTO NestsIn (TreeID, BirdID, NestYear){os.linesep}VALUES ({self.tree_NestsIn[i]}, {self.bird_NestsIn[i]}, {self.year_NestsIn[i]}){os.linesep}{os.linesep}'''
+            temp = f'''INSERT INTO NestsIn (TreeID, BirdID, NestYear){os.linesep}VALUES ({self.tree_NestsIn[i]}, {self.bird_NestsIn[i]}, {self.year_NestsIn[i]});{os.linesep}{os.linesep}'''
             nestINTable.append(temp)
         nestINTable.append(self.end_line)
         with open('nestInTable.sql', 'w', encoding='utf-8') as f:
