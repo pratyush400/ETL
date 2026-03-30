@@ -1,6 +1,6 @@
 
 
- --Query1
+--Query1
 USE tree;
 
     SELECT Neighbourhood, COUNT(ObservedDate) AS Number_of_Observations
@@ -30,7 +30,7 @@ USE tree;
 --Query4
 
 USE tree;
-    SELECT DISTINCT Species AS Species_that_has_flower, ID
+    SELECT DISTINCT Species AS Species_that_has_flower
     FROM Tree
 	WHERE Species LIKE '%flower%';
 
